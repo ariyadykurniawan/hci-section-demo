@@ -17,9 +17,6 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.Arrays;
 import java.util.List;
-
-import static com.sun.javaws.JnlpxArgs.verify;
-import static com.sun.tools.doclint.Entity.times;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.junit.Assert.*;

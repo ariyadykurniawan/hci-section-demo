@@ -79,6 +79,11 @@
 						<goals>
 							<goal>report</goal>
 						</goals>
+
+						<!-- default target/jscoco/site/* -->
+						<configuration>
+							<outputDirectory>target/jacoco-report</outputDirectory>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>

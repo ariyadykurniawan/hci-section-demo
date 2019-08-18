@@ -1,6 +1,5 @@
 package hci.section.demo.controller;
 
-import com.sun.xml.internal.ws.api.pipe.ContentType;
 import hci.section.demo.entity.User;
 import hci.section.demo.exception.DataExist;
 import hci.section.demo.exception.DataNotFound;
