@@ -90,6 +90,16 @@ public class SectionControllerIntegrationTest {
     }
 
     @Test
+    public void addSectionGroup_conflict() throws Exception{
+        SectionGroup sectionGroup1 = new SectionGroup(sectionGroupName);
+
+        mockMvc.perform(post("/api/section-group")
+                .header(HttpHeaders.CONTENT_TYPE, "application/json")
+                .content(objectMapper.writeValueAsString(sectionGroup1)))
+                .andExpect(status().isConflict());
+    }
+
+    @Test
     public void editSection() throws Exception{
         String sectionGroupName1 = RandomStringUtils.randomAlphabetic(10);
         SectionGroup sectionGroup1 = new SectionGroup(ID, sectionGroupName1);

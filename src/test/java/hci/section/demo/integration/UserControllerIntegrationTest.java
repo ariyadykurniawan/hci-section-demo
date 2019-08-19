@@ -95,6 +95,15 @@ public class UserControllerIntegrationTest {
                 .andExpect(jsonPath("$.status",is("OK")));
     }
 
+    @Test
+    public void addUser_conflict() throws Exception{
+        User user1 = new User(username,"zoo","topia", (long) 3);
+        mockMvc.perform(post("/api/user")
+                .header(HttpHeaders.CONTENT_TYPE, "application/json")
+                .content(objectMapper.writeValueAsString(user1)))
+                .andExpect(status().isConflict());
+    }
+
 
 
     @Test
