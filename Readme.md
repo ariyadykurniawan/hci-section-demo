@@ -26,6 +26,11 @@ $ mvn clean test
 ```
 
 ## Coverage Test Report
-```$xslt
+```
 target/site/jacoco/index.html
+```
+
+## Postman Collection
+```
+https://www.getpostman.com/collections/a9407a10824b1c55a324
 ```
