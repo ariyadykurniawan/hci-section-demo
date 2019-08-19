@@ -43,6 +43,14 @@ public class User {
         this.idSectionGroup = idSectionGroup;
     }
 
+    public  User(Long id,String username, String firstName, String lastName, Long idSectionGroup){
+        this.id = id;
+        this.username = username;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.idSectionGroup = idSectionGroup;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

@@ -80,8 +80,7 @@ public class SectionGroupServiceImplTest {
 
     @Test
     public void editSectionGroup() {
-        SectionGroup sectionGroupEdit = new SectionGroup("GroupA");
-        sectionGroupEdit.setId(ID);
+        SectionGroup sectionGroupEdit = new SectionGroup(ID,"GroupA");
         Mockito.when(sectionGroupRepository.save(sectionGroupEdit)).thenReturn(sectionGroupEdit);
 
         SectionGroup updated = sectionGroupService.editSectionGroup(sectionGroupEdit,ID);
@@ -90,8 +89,7 @@ public class SectionGroupServiceImplTest {
 
     @Test
     public void deleteSectionGroup() {
-        SectionGroup sectionGroupDelete = new SectionGroup("GroupA");
-        sectionGroupDelete.setId(ID);
+        SectionGroup sectionGroupDelete = new SectionGroup(ID,"GroupA");
 
         sectionGroupService.deleteSectionGroup(ID);
         verify(sectionGroupRepository, times(1)).deleteById(sectionGroupDelete.getId());

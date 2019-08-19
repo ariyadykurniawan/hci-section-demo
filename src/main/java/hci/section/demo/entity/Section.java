@@ -18,6 +18,12 @@ public class Section {
     public Section(String sectionName){
         this.sectionName  = sectionName;
     }
+
+    public Section(Long id, String sectionName){
+        this.id = id;
+        this.sectionName  = sectionName;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

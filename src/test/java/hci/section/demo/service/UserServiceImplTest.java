@@ -84,8 +84,7 @@ public class UserServiceImplTest {
 
     @Test
     public void editUser() {
-        User editAriyady = new User("akurniawan","ariyady","kurniawan", (long) 1);
-        editAriyady.setId(ID);
+        User editAriyady = new User(ID,"akurniawan","ariyady","kurniawan", (long) 1);
         Mockito.when(userRepository.save(editAriyady)).thenReturn(editAriyady);
 
         User updated = userService.editUser(editAriyady, ID);
@@ -97,8 +96,7 @@ public class UserServiceImplTest {
     @Test
     public void deleteUser() {
 
-        User userDelete = new User("ariyady","ariyady","kurniawan", (long) 3);
-        userDelete.setId(Long.valueOf(ID));
+        User userDelete = new User(ID,"ariyady","ariyady","kurniawan", (long) 3);
 
         userService.deleteUser(userDelete.getId());
 

@@ -18,6 +18,10 @@ public class SectionGroup {
     public SectionGroup(String sectionGroupName){
         this.sectionGroupName = sectionGroupName;
     }
+    public SectionGroup(Long id, String sectionGroupName){
+        this.id = id;
+        this.sectionGroupName = sectionGroupName;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

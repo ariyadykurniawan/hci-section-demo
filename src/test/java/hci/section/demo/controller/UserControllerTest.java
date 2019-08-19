@@ -41,8 +41,7 @@ public class UserControllerTest {
 
     @Before
     public void init(){
-        User user1 = new User("akurniawan","ariyady","kurniawan", (long) 3);
-        user1.setId(ID);
+        User user1 = new User(ID,"akurniawan","ariyady","kurniawan", (long) 3);
         given(userService.getUserById(ID)).willReturn(user1);
         given(userService.getUserByUsername(user1.getUsername())).willReturn(user1);
     }
@@ -103,8 +102,7 @@ public class UserControllerTest {
 
     @Test
     public void editUser() throws Exception{
-        User user1 = new User("akurniawan","ariyady","kurniawan", (long) 3);
-        user1.setId(ID);
+        User user1 = new User(ID,"akurniawan","ariyady","kurniawan", (long) 3);
         given(userService.addUser(user1)).willReturn(user1);
 
         mockMvc.perform(put("/api/user/1")

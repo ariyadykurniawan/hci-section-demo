@@ -42,8 +42,7 @@ public class SectionControllerTest {
 
     @Before
     public void init(){
-        Section section1 = new Section("News");
-        section1.setId(ID);
+        Section section1 = new Section(ID,"News");
         given(sectionService.getSectionById(ID)).willReturn(section1);
         given(sectionService.getSectionByName(section1.getSectionName())).willReturn(section1);
     }
@@ -91,8 +90,7 @@ public class SectionControllerTest {
 
     @Test
     public void editSection() throws Exception{
-        Section section1 = new Section("News");
-        section1.setId(ID);
+        Section section1 = new Section(ID,"News");
         given(sectionService.editSection(section1,ID)).willReturn(section1);
 
         mockMvc.perform(put("/api/section/1")

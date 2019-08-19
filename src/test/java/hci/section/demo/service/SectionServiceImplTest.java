@@ -82,8 +82,7 @@ public class SectionServiceImplTest {
 
     @Test
     public void editSection() {
-        Section sectionEdit = new Section("History");
-        sectionEdit.setId(ID);
+        Section sectionEdit = new Section(ID,"History");
         Mockito.when(sectionRepository.save(sectionEdit)).thenReturn(sectionEdit);
 
         Section updated = sectionService.editSection(sectionEdit,ID);
@@ -92,8 +91,7 @@ public class SectionServiceImplTest {
 
     @Test
     public void deleteSection() {
-        Section sectionDelete = new Section("News");
-        sectionDelete.setId(ID);
+        Section sectionDelete = new Section(ID,"News");
 
         sectionService.deleteSection(ID);
         verify(sectionRepository, times(1)).deleteById(sectionDelete.getId());

@@ -43,8 +43,7 @@ public class SectionGroupControllerTest {
 
     @Before
     public void init(){
-        SectionGroup sectionGroup1 = new SectionGroup("Group1");
-        sectionGroup1.setId(ID);
+        SectionGroup sectionGroup1 = new SectionGroup(ID,"Group1");
         given(sectionGroupService.getSectionGroupById(ID)).willReturn(sectionGroup1);
         given(sectionGroupService.getSectionGroupByName(sectionGroup1.getSectionGroupName())).willReturn(sectionGroup1);
     }
@@ -92,8 +91,7 @@ public class SectionGroupControllerTest {
 
     @Test
     public void editSection() throws Exception{
-        SectionGroup sectionGroup1 = new SectionGroup("Group1");
-        sectionGroup1.setId(ID);
+        SectionGroup sectionGroup1 = new SectionGroup(ID,"Group1");
         given(sectionGroupService.editSectionGroup(sectionGroup1,ID)).willReturn(sectionGroup1);
 
         mockMvc.perform(put("/api/section-group/1")
