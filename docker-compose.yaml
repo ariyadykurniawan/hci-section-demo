@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  mysql-docker-container:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=jakarta123
+      - MYSQL_DATABASE=db_hcipretest
+    volumes:
+      - /data/mysql
+  hci-section-demo:
+    image: hci-demo-section
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql-docker-container
+    ports:
+      - 8087:8080
+    volumes:
+      - /data/spring-boot-app
