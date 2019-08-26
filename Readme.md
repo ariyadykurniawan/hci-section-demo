@@ -34,3 +34,8 @@ target/site/jacoco/index.html
 ```
 https://www.getpostman.com/collections/a9407a10824b1c55a324
 ```
+
+## Docker
+```shell
+$ docker-compose up
+```
