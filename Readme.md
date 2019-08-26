@@ -8,7 +8,8 @@ For building and running the application you need:
 
 - [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - [Maven 3](https://maven.apache.org)
-- [MySql]
+- [MySql](https://www.mysql.com/)
+- [Docker](https://docs.docker.com/)
 
 ## Running the application locally
 
@@ -25,6 +26,11 @@ $ mvn spring-boot:run
 $ mvn clean test
 ```
 
+## Docker
+```shell
+$ docker-compose up
+```
+
 ## Coverage Test Report
 ```
 target/site/jacoco/index.html
@@ -33,9 +39,4 @@ target/site/jacoco/index.html
 ## Postman Collection
 ```
 https://www.getpostman.com/collections/a9407a10824b1c55a324
-```
-
-## Docker
-```shell
-$ docker-compose up
 ```

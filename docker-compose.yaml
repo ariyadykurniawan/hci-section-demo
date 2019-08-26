@@ -6,6 +6,10 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=jakarta123
       - MYSQL_DATABASE=db_hcipretest
+      - MYSQL_USER=hci_user
+      - MYSQL_PASSWORD=12345
+    ports:
+      - 2012:3306
     volumes:
       - /data/mysql
   hci-section-demo:
