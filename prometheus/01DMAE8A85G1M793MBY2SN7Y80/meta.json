@@ -1,0 +1,17 @@
+{
+	"ulid": "01DMAE8A85G1M793MBY2SN7Y80",
+	"minTime": 1567929600000,
+	"maxTime": 1567936800000,
+	"stats": {
+		"numSamples": 64932,
+		"numSeries": 643,
+		"numChunks": 753
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01DMAE8A85G1M793MBY2SN7Y80"
+		]
+	},
+	"version": 1
+}

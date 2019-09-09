@@ -13,13 +13,40 @@ services:
     volumes:
       - /data/mysql
   hci-section-demo:
-    image: hci-demo-section
+    image: hci-section-demo
+    container_name: hci-section-demo
     build:
       context: ./
       dockerfile: Dockerfile
     depends_on:
       - mysql-docker-container
     ports:
-      - 8087:8080
+      - 8080:8080
     volumes:
       - /data/spring-boot-app
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - 3000:3000
+    volumes:
+      - ./grafana:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=password
+    networks:
+      monitoring:
+        aliases:
+          - grafana
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus:/prometheus
+    networks:
+      monitoring:
+        aliases:
+          - prometheus
+networks:
+  monitoring:

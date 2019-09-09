@@ -1,0 +1,85 @@
+2019-09-08 19:46:58,596 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SectionApplication on C02Y95RFJG5H.local with PID 1957 (/Users/ovo/Project/hci-section-demo/target/classes started by ovo in /Users/ovo/Project/hci-section-demo)
+2019-09-08 19:46:58,599 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-09-08 19:46:58,632 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-08 19:46:58,632 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-08 19:46:59,387 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-08 19:46:59,471 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 75ms. Found 4 repository interfaces.
+2019-09-08 19:46:59,887 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$51ae7770] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-08 19:47:00,236 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2019-09-08 19:47:00,252 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2019-09-08 19:47:00,260 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-09-08 19:47:00,260 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-08 19:47:00,345 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-09-08 19:47:00,346 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1714 ms
+2019-09-08 19:47:00,870 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-09-08 19:47:00,873 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-09-08 19:47:01,192 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-09-08 19:47:01,233 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-08 19:47:01,279 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.10.Final}
+2019-09-08 19:47:01,280 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2019-09-08 19:47:01,414 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-08 19:47:01,519 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-08 19:47:01,565 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [restartedMain] HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-09-08 19:47:02,107 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-08 19:47:02,125 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2019-09-08 19:47:02,796 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-08 19:47:02,838 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-08 19:47:03,122 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 16 endpoint(s) beneath base path '/actuator'
+2019-09-08 19:47:03,173 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2019-09-08 19:47:03,208 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-08 19:47:03,210 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SectionApplication in 24.928 seconds (JVM running for 25.28)
+2019-09-08 19:47:13,108 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-08 19:47:13,108 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2019-09-08 19:47:13,117 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 9 ms
+2019-09-08 19:47:13,157 INFO hci.section.demo.controller.UserController [http-nio-8080-exec-1] Start get user by ID : ## 123
+2019-09-08 19:47:13,253 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [hci.section.demo.exception.DataNotFound: java.util.NoSuchElementException: No value present]
+2019-09-08 19:47:17,081 INFO hci.section.demo.controller.UserController [http-nio-8080-exec-2] Start get user by ID : ## 3
+2019-09-08 19:47:17,095 INFO hci.section.demo.controller.UserController [http-nio-8080-exec-2] Success get user with id : ## 3
+2019-09-08 20:09:56,728 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-9] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-08 20:09:56,730 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-9] Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-08 20:09:56,734 INFO com.zaxxer.hikari.HikariDataSource [Thread-9] HikariPool-1 - Shutdown initiated...
+2019-09-08 20:10:06,741 INFO com.zaxxer.hikari.HikariDataSource [Thread-9] HikariPool-1 - Shutdown completed.
+2019-09-08 20:10:32,441 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SectionApplication on C02Y95RFJG5H.local with PID 2058 (/Users/ovo/Project/hci-section-demo/target/classes started by ovo in /Users/ovo/Project/hci-section-demo)
+2019-09-08 20:10:32,444 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2019-09-08 20:10:32,480 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-08 20:10:32,481 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-08 20:10:33,179 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-08 20:10:33,239 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 54ms. Found 4 repository interfaces.
+2019-09-08 20:10:33,575 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d925e83b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-08 20:10:33,911 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2019-09-08 20:10:33,924 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2019-09-08 20:10:33,931 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2019-09-08 20:10:33,931 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-08 20:10:34,002 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-09-08 20:10:34,003 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1522 ms
+2019-09-08 20:10:34,453 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-09-08 20:10:34,456 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-09-08 20:10:34,725 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-09-08 20:10:34,763 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-08 20:10:34,806 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.10.Final}
+2019-09-08 20:10:34,807 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2019-09-08 20:10:34,919 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-08 20:10:35,035 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-08 20:10:35,080 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [restartedMain] HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-09-08 20:10:35,567 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-08 20:10:35,581 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2019-09-08 20:10:36,220 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-08 20:10:36,265 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-08 20:10:36,562 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 16 endpoint(s) beneath base path '/actuator'
+2019-09-08 20:10:36,617 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2019-09-08 20:10:36,653 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2019-09-08 20:10:36,655 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SectionApplication in 24.545 seconds (JVM running for 24.967)
+2019-09-08 20:10:44,735 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-08 20:10:44,735 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2019-09-08 20:10:44,747 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 11 ms
+2019-09-08 20:10:44,799 INFO hci.section.demo.controller.UserController [http-nio-8080-exec-1] Start get user by ID : ## 3
+2019-09-08 20:10:44,852 INFO hci.section.demo.controller.UserController [http-nio-8080-exec-1] Success get user with id : ## 3
+2019-09-08 20:10:45,569 INFO hci.section.demo.controller.UserController [http-nio-8080-exec-2] Start get user by ID : ## 3
+2019-09-08 20:10:45,574 INFO hci.section.demo.controller.UserController [http-nio-8080-exec-2] Success get user with id : ## 3
+2019-09-08 20:10:45,981 INFO hci.section.demo.controller.UserController [http-nio-8080-exec-3] Start get user by ID : ## 3
+2019-09-08 20:10:45,984 INFO hci.section.demo.controller.UserController [http-nio-8080-exec-3] Success get user with id : ## 3
+2019-09-08 20:19:12,371 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m37s534ms).

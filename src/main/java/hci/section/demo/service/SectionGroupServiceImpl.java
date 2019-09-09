@@ -1,7 +1,10 @@
 package hci.section.demo.service;
 
 import hci.section.demo.entity.SectionGroup;
+import hci.section.demo.entity.SectionGroupDetail;
+import hci.section.demo.repository.SectionGroupDetailRepository;
 import hci.section.demo.repository.SectionGroupRepository;
+import hci.section.demo.repository.SectionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +33,7 @@ public class SectionGroupServiceImpl implements SectionGroupService{
     @Override
     public SectionGroup addSectionGroup(SectionGroup sectionGroup) {
         return sectionGroupRepository.save(sectionGroup);
+
     }
 
     @Override

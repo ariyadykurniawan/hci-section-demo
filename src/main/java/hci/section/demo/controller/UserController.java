@@ -6,6 +6,12 @@ import hci.section.demo.exception.DataNotFound;
 import hci.section.demo.model.Meta;
 import hci.section.demo.model.Response;
 import hci.section.demo.service.UserService;
+import io.micrometer.core.annotation.Timed;
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.MeterRegistry;
+import io.micrometer.core.instrument.Timer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
@@ -15,24 +21,41 @@ import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/api")
+@Timed
 public class UserController {
     @Autowired
     private UserService userService;
+    Timer getAlluserTimer;
+    Counter counter;
+
+    Logger logger = LoggerFactory.getLogger(UserController.class);
+
+    public UserController(MeterRegistry meterRegistry){
+        counter = meterRegistry.counter("UserControllerCounter");
+        getAlluserTimer = meterRegistry.timer("http_requests", "method", "GET");
+    }
 
     @GetMapping("/users")
     public Response getAlluser(){
-        return new Response(Response.STATUS_OK,
-                userService.getAllUser(),
-                new Meta(HttpStatus.OK.value(), "Fetch all users"));
+        logger.info("Start get All Users");
+        return getAlluserTimer.record(()->{
+            counter.increment();
+            return new Response(Response.STATUS_OK,
+                    userService.getAllUser(),
+                    new Meta(HttpStatus.OK.value(), "Fetch all users"));
+        });
     }
 
     @GetMapping("/user/{id}")
     public Response getUserById(@PathVariable("id") Long id){
         try{
-            return new Response(
+            logger.info("Start get user by ID : ## {}",id);
+            Response response = new Response(
                     Response.STATUS_OK,
                     userService.getUserById(id),
                     new Meta(HttpStatus.OK.value(), "Fetch user by Id"));
+            logger.info("Success get user with id : ## {}",id);
+            return response;
         }catch (NoSuchElementException err){
             throw new DataNotFound(err);
         }
